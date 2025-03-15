@@ -1,0 +1,58 @@
+/* Make the grid responsive */
+.attendance-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.attendance-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.attendance-row {
+  display: grid;
+  grid-template-columns: 150px repeat(7, 1fr);
+  gap: 5px;
+  align-items: center;
+}
+
+.attendance-cell {
+  text-align: center;
+  padding: 5px;
+}
+
+.attendance-cell.header {
+  font-weight: bold;
+  background-color: #f1f1f1;
+}
+
+.attendance-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+button {
+  font-size: 14px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+/* Mobile-friendly styling */
+@media (max-width: 768px) {
+  .attendance-grid {
+    padding: 10px;
+  }
+
+  .attendance-header,
+  .attendance-row {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .attendance-cell {
+    font-size: 12px;
+  }
+}
